@@ -19,12 +19,15 @@ def sumMatrix(matrixOne, matrixTwo):
         matrixRezult.append(lineRezult)
     return matrixRezult
 
+def generateMatrixRandomValue(m, n):
+    return [[randomNumber() for i in range(int(n))] for i in range(int(m))]
+
 print('Задайте размер матрицы M x N')
 m = int(input('M = '))
 n = int(input('N = '))
 
-matrixOne = [[randomNumber() for i in range(n)] for i in range(m)]
-matrixTwo = [[randomNumber() for i in range(n)] for i in range(m)]
+matrixOne = generateMatrixRandomValue(m, n)
+matrixTwo = generateMatrixRandomValue(m, n)
 
 print('Матрица № 1')
 printMatrix(matrixOne)
